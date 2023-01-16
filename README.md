@@ -1,22 +1,12 @@
 # Weights-Pruning
 
 ![boxing](https://github.com/MichaelB0312/Weights-Pruning/blob/main/images/prune_vis.gif)
-
 [Michael Berko](https://github.com/MichaelB0312)  [Naomi Shapiro](https://github.com/naomishmish)
-
 
 ##
 ### In this project, we will explore how reducing weights in a given model affects the accuracy of the model, in different words exploring the tradeoff between low memory and high accuracy. 
 
-
-Video:
-
-
-[YouTube](https://youtu.be/i8Cnas7QrMc) - https://youtu.be/i8Cnas7QrMc
-
-
-![boxing](https://github.com/MichaelB0312/Weights-Pruning/blob/main/images/prune_vis.gif)
-![boxing](https://github.com/taldatech/pytorch-ls-dqn/blob/master/images/boxing.gif)
+## Agenda
 
 [LS-DDPG](https://github.com/taldatech/pytorch-ls-ddpg) - https://github.com/taldatech/pytorch-ls-ddpg
 
