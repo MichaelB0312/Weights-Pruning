@@ -29,6 +29,8 @@ We will gradually remove weights with the lowest L1-norm in a trained model and 
 We took the idea for this project from:[Pruning Algorithm to Accelerate Convolutional Neural Networks for Edge Applications](http://arxiv.org/abs/2005.04275), by J. Liu, S. Tripathi, U. Kurup, and M. Shah.
 
 ## Dataset
+We used the [Cifar10](https://www.cs.toronto.edu/~kriz/cifar.html) dataset in this project.
+Cifar10 is the subset labeled dataset collected from 80 million tiny images dataset and contains 10 classes. 
 
 ## Prerequisites
 |Library         | Version |
