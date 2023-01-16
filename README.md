@@ -4,7 +4,7 @@
 
 ![boxing](https://github.com/MichaelB0312/Weights-Pruning/blob/main/images/prune_vis.gif)
 
-[Michael Berko](https://github.com/MichaelB0312)  and  [Naomi Shapiro](https://github.com/naomishmish)
+#### [Naomi Shapiro](https://github.com/naomishmish)   and   [Michael Berko](https://github.com/MichaelB0312)
 ##
 
 ### In this project, we will explore how reducing weights in a given model affects the accuracy of the model, in different words exploring the tradeoff between low memory and high accuracy. 
