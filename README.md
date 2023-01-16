@@ -17,8 +17,8 @@
 * [Pruning Process](#Pruning Process)
 * [Parameters](#prerequisites)
 * [Training](#training) - Maybe we'll combine it with Running Instructions
+* [Running Instructions](#Running Instructions)
 * [Results](#Results)
-* [Running Instructions](#Run Instructions)
 * [Prerequisites](#prerequisites)
 * [Files in the repository](#files-in-the-repository)
 * [References](#references)
@@ -44,6 +44,8 @@ Pruning generally means cutting down parts of the network that contribute less o
 In this project, we will use connection pruning, particularly L1 norm pruning, which removes a specified number of weights units with the lowest L1 norm.
 
 ![boxing](https://github.com/MichaelB0312/Weights-Pruning/blob/main/images/pruning_process.png)
+
+## Running Instructions
 
 
 ## Prerequisites
