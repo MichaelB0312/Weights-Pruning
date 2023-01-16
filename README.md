@@ -37,7 +37,7 @@ We used the [ResNet50](http://image-net.org/challenges/LSVRC/2015/) Model in thi
 Deep Convolutional neural networks are great at identifying features from images, and adding more layers generally provides better accuracy. However, adding more layers to a suitable deep model just increases the training error and does not give better results.
 The problem is the vanishing gradients, i.e. the gradients decrease in the first layers as the network becomes more deeper.
 The ResNet50 network solves this problem by creating shortcut connections that simply perform identity mappings. This allows the running tasks to earn depth benefits while reasonably maintaining (reducing) the computational expense.
-
+![boxing](https://github.com/MichaelB0312/Weights-Pruning/blob/main/images/resnet50.png)
 
 
 ## Prerequisites
