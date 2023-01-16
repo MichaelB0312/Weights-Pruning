@@ -39,6 +39,10 @@ The problem is the vanishing gradients, i.e. the gradients decrease in the first
 The ResNet50 network solves this problem by creating shortcut connections that simply perform identity mappings. This allows the running tasks to earn depth benefits while reasonably maintaining (reducing) the computational expense.
 ![boxing](https://github.com/MichaelB0312/Weights-Pruning/blob/main/images/resnet50.png)
 
+## Pruning Process
+Pruning generally means cutting down parts of the network that contribute less or nothing to the network during inference. This results in models that are smaller in size, more memory-efficient, more power-efficient, and faster at inference with minimal loss in accuracy.
+In this project, we will use connection pruning, particularly L1 norm pruning, which removes a specified number of weights units with the lowest L1 norm.
+
 
 ## Prerequisites
 |Library         | Version |
