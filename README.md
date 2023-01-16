@@ -5,7 +5,7 @@
 
 
 <p align="center">
-Naomi Shapiro "*" Michael Berko
+Naomi Shapiro - Michael Berko
 </p>
 
 
