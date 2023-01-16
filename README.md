@@ -5,7 +5,7 @@
 
 
 <p align="center">
-[Michael Berko](https://github.com/MichaelB0312)  [Naomi Shapiro](https://github.com/MichaelB0312)
+<[Michael Berko](https://github.com/MichaelB0312)  [Naomi Shapiro](https://github.com/MichaelB0312)/>
 </p>
 
 
