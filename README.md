@@ -8,7 +8,7 @@ Nir Levine, Tom Zahavy, Daniel J. Mankowitz, Aviv Tamar, Shie Mannor [Shallow Up
 
 Video:
 
-![](https://images.app.goo.gl/VyYzkhPamFTsf6LE6)
+![](https://images.app.goo.gl/n7HyX434xuBEWC1c9)
 [YouTube](https://youtu.be/i8Cnas7QrMc) - https://youtu.be/i8Cnas7QrMc
 
 
