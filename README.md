@@ -24,13 +24,9 @@
 * [References](#references)
 
 ## Background
-The idea of this algorithm is to combine between Deep RL (DRL) to Shallow RL (SRL), where in this case, we use Deep Q-Learning (DQN) as the DRL algorithm and
-Fitted Q-Iteration (FQI) as the SRL algorithm (which can be approximated using least-squares, full derivation is in the original paper).
-Every N_DRL (number of DQN backprop steps) we apply LS-UPDATE to the very last layer of the DQN, by using the complete Replay Buffer, a fetaure augmentation technique and
-Bayesian regularization (prevents overfitting, makes the LS matrix invertible) to solve the FQI equations.
-The assumptions are that the features extracted from the last layer form a rich representation, and that the large batch size used by the SRL algorithm improves stability and performance.
-In this work we added the derivations and approximations for Dueling DQN architecture and also added Boosted FQI as an optional SRL algorithm.
-For full derivations and theory, please refer to the original paper.
+In this project, we will explore how reducing weights in a given model affects the accuracy of the model, in different words exploring the tradeoff between low memory and high accuracy. 
+We will gradually remove weights with the lowest L1-norm in a trained model and see the test results. **Our assumption is that the lowest l1-norm weights are the least effective on model classification quality**. Our challenge will be how to decrease amount of weights without hurting the accuracy too much. In the end, we will determine what is the optimal percent of weights that can be removed with keeping high accuracy.
+We took the idea for this project from:[Pruning Algorithm to Accelerate Convolutional Neural Networks for Edge Applications](http://arxiv.org/abs/2005.04275), by J. Liu, S. Tripathi, U. Kurup, and M. Shah.
 
 ## Dataset
 
