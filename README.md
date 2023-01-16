@@ -1,8 +1,13 @@
 # Weights-Pruning
 
-PyTorch implementation of Least-Squares DQN with extras (DuelingDQN, Boosted FQI)
 
 ### In this project, we will explore how reducing weights in a given model affects the accuracy of the model, in different words exploring the tradeoff between low memory and high accuracy. 
+
+
+<p align="center">
+Naomi Shapiro * Michael Berko
+</p>
+
 
 Nir Levine, Tom Zahavy, Daniel J. Mankowitz, Aviv Tamar, Shie Mannor [Shallow Updates for Deep Reinforcement Learning](https://arxiv.org/abs/1705.07461), NIPS 2017
 
