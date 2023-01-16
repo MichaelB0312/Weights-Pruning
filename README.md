@@ -4,25 +4,24 @@
 
 ![boxing](https://github.com/MichaelB0312/Weights-Pruning/blob/main/images/prune_vis.gif)
 
-[Michael Berko](https://github.com/MichaelB0312)  [Naomi Shapiro](https://github.com/naomishmish)
+[Michael Berko](https://github.com/MichaelB0312)  and  [Naomi Shapiro](https://github.com/naomishmish)
 ##
 
 #### In this project, we will explore how reducing weights in a given model affects the accuracy of the model, in different words exploring the tradeoff between low memory and high accuracy. 
 
 ## Agenda
 
-[LS-DDPG](https://github.com/taldatech/pytorch-ls-ddpg) - https://github.com/taldatech/pytorch-ls-ddpg
-
-- [pytorch-ls-dqn](#pytorch-ls-dqn)
-  * [Background](#background)
-  * [Prerequisites](#prerequisites)
-  * [Files in the repository](#files-in-the-repository)
-  * [API (`ls_dqn_main.py --help`)](#api---ls-dqn-mainpy---help--)
-  * [Playing](#playing)
-  * [Training](#training)
-  * [Playing Atari on Windows](#playing-atari-on-windows)
-  * [TensorBoard](#tensorboard)
-  * [References](#references)
+* [Background](#background)
+* [dataset](#dataset)
+* [Model](#prerequisites)
+* [Pruning Process](#Pruning Process)
+* [Parameters](#prerequisites)
+* [Training](#training) - Maybe we'll combine it with Running Instructions
+* [Results](#Results)
+* [Running Instructions](#Run Instructions)
+* [Prerequisites](#prerequisites)
+* [Files in the repository](#files-in-the-repository)
+* [References](#references)
 
 ## Background
 The idea of this algorithm is to combine between Deep RL (DRL) to Shallow RL (SRL), where in this case, we use Deep Q-Learning (DQN) as the DRL algorithm and
