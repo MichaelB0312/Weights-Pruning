@@ -1,15 +1,13 @@
 # Weights-Pruning
 
+![boxing](https://github.com/MichaelB0312/Weights-Pruning/blob/main/images/prune_vis.gif)
+
+
+                           [Naomi Shapiro](https://github.com/MichaelB0312)      [Michael Berko](https://github.com/MichaelB0312)
+
 
 ### In this project, we will explore how reducing weights in a given model affects the accuracy of the model, in different words exploring the tradeoff between low memory and high accuracy. 
 
-
-<p align="center">
-Naomi Shapiro - [Michael Berko](https://github.com/MichaelB0312)
-</p>
-
-
-Nir Levine, Tom Zahavy, Daniel J. Mankowitz, Aviv Tamar, Shie Mannor [Michael Berko](https://github.com/MichaelB0312), NIPS 2017
 
 Video:
 
