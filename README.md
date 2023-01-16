@@ -42,6 +42,7 @@ The ResNet50 network solves this problem by creating shortcut connections that s
 ## Pruning Process
 Pruning generally means cutting down parts of the network that contribute less or nothing to the network during inference. This results in models that are smaller in size, more memory-efficient, more power-efficient, and faster at inference with minimal loss in accuracy.
 In this project, we will use connection pruning, particularly L1 norm pruning, which removes a specified number of weights units with the lowest L1 norm.
+
 ![boxing](https://github.com/MichaelB0312/Weights-Pruning/blob/main/images/pruning_process.png)
 
 
