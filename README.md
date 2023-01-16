@@ -13,7 +13,7 @@
 
 * [Background](#background)
 * [Dataset](#dataset)
-* [Model](#prerequisites)
+* [Model](#model)
 * [Pruning Process](#Pruning Process)
 * [Parameters](#prerequisites)
 * [Training](#training) - Maybe we'll combine it with Running Instructions
@@ -30,7 +30,15 @@ We took the idea for this project from:[Pruning Algorithm to Accelerate Convolut
 
 ## Dataset
 We used the [Cifar10](https://www.cs.toronto.edu/~kriz/cifar.html) dataset in this project.
-Cifar10 is the subset labeled dataset collected from 80 million tiny images dataset and contains 10 classes. 
+Cifar10 is the subset labeled dataset collected from 80 million tiny images dataset and contains 10 classes.
+
+## Model
+We used the [ResNet50](http://image-net.org/challenges/LSVRC/2015/) Model in this project.
+Deep Convolutional neural networks are great at identifying features from images, and adding more layers generally provides better accuracy. However, adding more layers to a suitable deep model just increases the training error and does not give better results.
+The problem is the vanishing gradients, i.e. the gradients decrease in the first layers as the network becomes more deeper.
+The ResNet50 network solves this problem by creating shortcut connections that simply perform identity mappings. This allows the running tasks to earn depth benefits while reasonably maintaining (reducing) the computational expense.
+
+
 
 ## Prerequisites
 |Library         | Version |
