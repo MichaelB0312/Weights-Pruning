@@ -12,7 +12,7 @@ Video:
 [YouTube](https://youtu.be/i8Cnas7QrMc) - https://youtu.be/i8Cnas7QrMc
 
 
-![](https://github.com/MichaelB0312/Weights-Pruning/blob/main/images/prune_vis.gif)
+![boxing](https://github.com/MichaelB0312/Weights-Pruning/blob/main/images/prune_vis.gif)
 ![boxing](https://github.com/taldatech/pytorch-ls-dqn/blob/master/images/boxing.gif)
 
 [LS-DDPG](https://github.com/taldatech/pytorch-ls-ddpg) - https://github.com/taldatech/pytorch-ls-ddpg
