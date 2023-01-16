@@ -2,7 +2,7 @@
 
 ![boxing](https://github.com/MichaelB0312/Weights-Pruning/blob/main/images/prune_vis.gif)
 
-[Michael Berko](https://github.com/MichaelB0312)  [Naomi Shapiro](https://github.com/MichaelB0312)
+[Michael Berko](https://github.com/MichaelB0312)  [Naomi Shapiro](https://github.com/naomishmish)
 
 
 ##
