@@ -9,7 +9,7 @@ Naomi Shapiro - [Michael Berko](https://github.com/MichaelB0312)
 </p>
 
 
-Nir Levine, Tom Zahavy, Daniel J. Mankowitz, Aviv Tamar, Shie Mannor [Shallow Updates for Deep Reinforcement Learning](https://arxiv.org/abs/1705.07461), NIPS 2017
+Nir Levine, Tom Zahavy, Daniel J. Mankowitz, Aviv Tamar, Shie Mannor [Michael Berko](https://github.com/MichaelB0312), NIPS 2017
 
 Video:
 
