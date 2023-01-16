@@ -11,7 +11,7 @@ Video:
 [YouTube](https://youtu.be/i8Cnas7QrMc) - https://youtu.be/i8Cnas7QrMc
 
 
-![pong](https://github.com/taldatech/pytorch-ls-dqn/blob/master/images/pong.gif)
+![pong](https://images.app.goo.gl/VyYzkhPamFTsf6LE6)
 ![boxing](https://github.com/taldatech/pytorch-ls-dqn/blob/master/images/boxing.gif)
 
 [LS-DDPG](https://github.com/taldatech/pytorch-ls-ddpg) - https://github.com/taldatech/pytorch-ls-ddpg
