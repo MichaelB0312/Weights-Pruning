@@ -12,7 +12,7 @@
 ## Agenda
 
 * [Background](#background)
-* [dataset](#dataset)
+* [Dataset](#dataset)
 * [Model](#prerequisites)
 * [Pruning Process](#Pruning Process)
 * [Parameters](#prerequisites)
@@ -32,6 +32,7 @@ The assumptions are that the features extracted from the last layer form a rich 
 In this work we added the derivations and approximations for Dueling DQN architecture and also added Boosted FQI as an optional SRL algorithm.
 For full derivations and theory, please refer to the original paper.
 
+## Dataset
 
 ## Prerequisites
 |Library         | Version |
