@@ -6,6 +6,11 @@ import os
 import torch
 import torch.nn as nn
 import torchvision
+import torchvision.transforms as transforms
+import torch.nn.functional as F
+import torch.nn.utils.prune as prune
+import torch.optim.lr_scheduler as lr_scheduler
+
 
 
 # define bottleneck for resnet model. i.e. one block of resnet 50

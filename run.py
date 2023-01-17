@@ -41,8 +41,8 @@ T_max = 20
 epochs = 60
 
 # dataloaders - creating batches and shuffling the data
-trainloader = torch.utils.data.DataLoader(trainset, batch_size=batch_size, shuffle=True, num_workers=2)
-testloader = torch.utils.data.DataLoader(testset, batch_size=batch_size, shuffle=False, num_workers=2)
+trainloader = torch.utils.data.DataLoader(trainset, batch_size=batch_size, shuffle=True)
+testloader = torch.utils.data.DataLoader(testset, batch_size=batch_size, shuffle=False)
 
 # device - cpu or gpu?
 device = torch.device("cuda:0" if torch.cuda.is_available() else "cpu")
