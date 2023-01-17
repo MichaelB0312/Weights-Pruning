@@ -47,6 +47,7 @@ In this project, we will use connection pruning, particularly L1 norm pruning, w
 
 ## Running Instructions
 
+### Stage 1: Run `main.py`
 
 ## Prerequisites
 |Library         | Version |
