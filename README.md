@@ -14,7 +14,7 @@
 * [Background](#background)
 * [Dataset](#dataset)
 * [Model](#model)
-* [Pruning Process](#Pruning Process)
+* [Pruning Process](#pruning-process)
 * [Parameters](#prerequisites)
 * [Training](#training) - Maybe we'll combine it with Running Instructions
 * [Running Instructions](#Running Instructions)
