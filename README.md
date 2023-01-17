@@ -52,29 +52,15 @@ Basically, you can run it directly by your favoutire IDE.
 Naturally, you would probably be inquisitive about the relations between hyprer-parameters and Pruning performance.
 Thus, **we're offering interactive I/O for hyprer-parameters tuning with `argparse`:**
 
-|Parameter | Type | Input Command | Recommended Value |
-|-------|------|---------------|----------------|
-|batch_size| int | ```cmd
-  python run.py lr
- ``` | 60 |
-|resume| int | 0 if we start a new training run and 1 if we resume old training|
-|ckpt_interval| int | epoch interval to save a new checkpoint |
-|tensorboard_dir| string | path to tensorboard log directory |
-|data_dir| string | path to dataset directory |
-|ckpt_dir| string | path to checkpoint directory |
-|ckpt_file| string | path to ckpt file to be loaded |
-|learn_window| int | 1 to learn stft window coefficients, 0 not to |
-|learn_kernels| int | 1 to learn stft kernels coefficients, 0 not to |
-|batch_size| int | size of batch |
-|num_workers| int | data loader's parameters: number of workers to pre-fetch the data |
-|epoch_num| int | number of total epoches to run |
-|learning_rate| int | initial optimizer's learning rate |
-|split_parts| int | how many parts to split our original audio file to. can be: 1, 3, 4, 6, 12|
-|gamma| int | scheduler's gamma |
-|cpu| int | 0 if we want to try and run on gpu, else if we want to run on cpu |
-|augmentation | int | 0 if we don't want to use augmentation, else if we do |
-|three_widows| int | 0 to use 1 STFT in classifier (greyscale), else for 3 STFT modules in classifier (RGB) |
-|optimizer_class| string | optimizer type: "SGD" or "AdamW" |
+|Parameter | Type | Input Command | Recommended Value | Description 
+|-------|------|-------------|-------|-------------------|
+|batch_size| int | ```python run.py --batch_size <your value>``` | 128 | mini-batch size |
+|learning_rate| float | ```python run.py --learning_rate <your value>```|0.01| initial optimizer's learning rate |
+|momentum| float | ```python run.py --learning_rate <your value>``` |0.9| Optionally for Adam's optimizer |
+|weight_decay| float | ```python run.py --weight_decay <your value>``` | 5e-4 | regularization parameter | 
+|epochs| int | ```python run.py --epochs <your value>``` | 60 | Amount of running on all data| 
+|T_max| int | ```python run.py --T_max <your value>``` | 20 |  [Cosine Annealing parameter](https://pytorch.org/docs/stable/generated/torch.optim.lr_scheduler.CosineAnnealingLR.html) |
+
 
 ## Prerequisites
 |Library         | Version |
