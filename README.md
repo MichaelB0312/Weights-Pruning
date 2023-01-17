@@ -54,7 +54,9 @@ Thus, **we're offering interactive I/O for hyprer-parameters tuning with `argpar
 
 |Parameter | Type | Input Command | Recommended Value |
 |-------|------|---------------|----------------|
-|batch_size| int | ```cmd  python run.py lr ``` | 60 |
+|batch_size| int | ```cmd
+  python run.py lr
+ ``` | 60 |
 |resume| int | 0 if we start a new training run and 1 if we resume old training|
 |ckpt_interval| int | epoch interval to save a new checkpoint |
 |tensorboard_dir| string | path to tensorboard log directory |
