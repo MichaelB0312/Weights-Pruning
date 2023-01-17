@@ -50,7 +50,29 @@ In this project, we will use connection pruning, particularly L1 norm pruning, w
 It's important to mention that Pruning process occures on **inference time**. Before that you should make the training of our model in `main.py`.
 Basically, you can run it directly by your favoutire IDE.
 Naturally, you would probably be inquisitive about the relations between hyprer-parameters and Pruning performance.
-Thus' we're offering interactive 
+Thus, **we're offering interactive I/O for hyprer-parameters tuning with `argparse`:**
+
+|Parameter | Type | Input Command | Recommended Value |
+|-------|------|---------------|----------------|
+|batch_size| int | ```cmd  python run.py lr ``` | 60 |
+|resume| int | 0 if we start a new training run and 1 if we resume old training|
+|ckpt_interval| int | epoch interval to save a new checkpoint |
+|tensorboard_dir| string | path to tensorboard log directory |
+|data_dir| string | path to dataset directory |
+|ckpt_dir| string | path to checkpoint directory |
+|ckpt_file| string | path to ckpt file to be loaded |
+|learn_window| int | 1 to learn stft window coefficients, 0 not to |
+|learn_kernels| int | 1 to learn stft kernels coefficients, 0 not to |
+|batch_size| int | size of batch |
+|num_workers| int | data loader's parameters: number of workers to pre-fetch the data |
+|epoch_num| int | number of total epoches to run |
+|learning_rate| int | initial optimizer's learning rate |
+|split_parts| int | how many parts to split our original audio file to. can be: 1, 3, 4, 6, 12|
+|gamma| int | scheduler's gamma |
+|cpu| int | 0 if we want to try and run on gpu, else if we want to run on cpu |
+|augmentation | int | 0 if we don't want to use augmentation, else if we do |
+|three_widows| int | 0 to use 1 STFT in classifier (greyscale), else for 3 STFT modules in classifier (RGB) |
+|optimizer_class| string | optimizer type: "SGD" or "AdamW" |
 
 ## Prerequisites
 |Library         | Version |
