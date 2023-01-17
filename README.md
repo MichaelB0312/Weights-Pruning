@@ -46,8 +46,11 @@ In this project, we will use connection pruning, particularly L1 norm pruning, w
 ![boxing](https://github.com/MichaelB0312/Weights-Pruning/blob/main/images/pruning_process.png)
 
 ## Running Instructions
-
 ### Stage 1: Run `main.py`
+It's important to mention that Pruning process occures on **inference time**. Before that you should make the training of our model in `main.py`.
+Basically, you can run it directly by your favoutire IDE.
+Naturally, you would probably be inquisitive about the relations between hyprer-parameters and Pruning performance.
+Thus' we're offering interactive 
 
 ## Prerequisites
 |Library         | Version |
