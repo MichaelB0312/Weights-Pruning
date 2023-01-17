@@ -10,6 +10,9 @@ import torch.nn.functional as F
 import torch.nn.utils.prune as prune
 import torch.optim.lr_scheduler as lr_scheduler
 from Build_Resnet import Resnet50Model
+import argparse
+
+parser = argparse.ArgumentParser()
 
 # define pre-processing steps on the images
 # also called "data augementation" (only done for the train set)
@@ -31,18 +34,20 @@ classes = ('plane', 'car', 'bird', 'cat', 'deer', 'dog', 'frog', 'horse', 'ship'
 trainset = torchvision.datasets.CIFAR10(root='./datasets', train=True, download=True, transform=transform_train)
 testset = torchvision.datasets.CIFAR10(root='./datasets', train=False, download=True, transform=transform_test)
 
-
+### we used parser for the hyper-parameters to the conveniece of the user
+### We set default values as the best hyper-parameters we've found in the base article.
 # hyper-parameters
-batch_size = 128
-learning_rate = 0.01
-momentum = 0.9
-weight_decay = 5e-4
-T_max = 20
-epochs = 60
+parser.add_argument('--batch_size', default=60, type=int, metavar='N', help='mini-batch size (default: 100)')
+parser.add_argument('--learning_rate', default=0.01, type=float, metavar='LR', help='initial learning rate')
+parser.add_argument('--momentum', default=0.9, type=float, metavar='M', help='momentum')
+parser.add_argument('--weight_decay', default=5e-4, type=float, metavar='W', help='weight decay (default: 1e-4)')
+parser.add_argument("--epochs", type=int, default=60, help="number of maximum training epochs")
+parser.add_argument("--T_max", type=int, default=20, help="length of period for scheduler- cosineAnnealing")
+args = parser.parse_args()
 
 # dataloaders - creating batches and shuffling the data
-trainloader = torch.utils.data.DataLoader(trainset, batch_size=batch_size, shuffle=True)
-testloader = torch.utils.data.DataLoader(testset, batch_size=batch_size, shuffle=False)
+trainloader = torch.utils.data.DataLoader(trainset, batch_size=args.batch_size, shuffle=True)
+testloader = torch.utils.data.DataLoader(testset, batch_size=args.batch_size, shuffle=False)
 
 # device - cpu or gpu?
 device = torch.device("cuda:0" if torch.cuda.is_available() else "cpu")
@@ -51,9 +56,9 @@ criterion = nn.CrossEntropyLoss()
 # build our model and send it to the device
 model = Resnet50Model().to(device)  # no need for parameters as we alredy defined them in the class
 # optimizer - SGD, Adam, RMSProp...
-optimizer = torch.optim.SGD(model.parameters(), lr=learning_rate, momentum=momentum, weight_decay=weight_decay)
+optimizer = torch.optim.SGD(model.parameters(), lr=args.learning_rate, momentum=args.momentum, weight_decay=args.weight_decay)
 # scheduler - reduce the learning rate during training
-scheduler = lr_scheduler.CosineAnnealingLR(optimizer, T_max)
+scheduler = lr_scheduler.CosineAnnealingLR(optimizer, args.T_max)
 
 
 # function to calcualte accuracy of the model
@@ -79,7 +84,7 @@ def calculate_accuracy(model, dataloader, device):
 
 
 # training loop
-for epoch in range(1, epochs + 1):
+for epoch in range(1, args.epochs + 1):
     model.train()  # put in training mode
     running_loss = 0.0
     epoch_time = time.time()
