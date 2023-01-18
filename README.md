@@ -88,6 +88,9 @@ As you cans see, we examine different percents of amount of weights to be omitte
 After having a baseline, we started to cut weights from the model. In each iteration, we removed a higher percentage of weights, from 0% in the first iteration to 100% in the last one, with a step size of 5%. In the end, we got a graph of the accuracy as a function of the pruning percent.
 
 We've got the following result:
+![boxing](https://github.com/MichaelB0312/Weights-Pruning/blob/main/images/prune_results.png)
+
+As we can see, Removing 40% of the weights: increases memory saving while having minimal damage on our high accuracy! 
 
 
 
