@@ -112,22 +112,12 @@ As we can see, it's possible to removing 40% of the weights, **massive saving of
 |`run.py`| where we train our model|
 |`Build_Resnet.py`| consists the elemntary blocks for resnet and their integration to the whole architecture|
 |`pruning.py`| post-training pruning procees as described above|
-|images| sample code for playing a game, also in `ls_dqn_main.py`|
-|`actions.py`| classes for actions selection (argmax, epsilon greedy)|
-|`agent.py`| agent class, holds the network, action selector and current state|
-|`dqn_model.py`| DQN classes, neural networks structures|
-|`experience.py`| Replay Buffer classes|
-|`hyperparameters.py`| hyperparameters for several Atari games, used as a baseline|
-|`srl_algorithms.py`| Shallow RL algorithms, LS-UPDATE|
-|`utils.py`| utility functions|
-|`wrappers.py`| DeepMind's wrappers for the Atari environments|
-|`*.pth`| Checkpoint files for the Agents (playing/continual learning)|
-|`Deep_RL_Shallow_Updates_for_Deep_Reinforcement_Learning.pdf`| Writeup - theory and results|
+|images| Readme.md images|
 
 
 
 ## References
-* [PyTorch Agent Net: reinforcement learning toolkit for pytorch](https://github.com/Shmuma/ptan) by [Max Lapan](https://github.com/Shmuma)
-* Nir Levine, Tom Zahavy, Daniel J. Mankowitz, Aviv Tamar, Shie Mannor [Shallow Updates for Deep Reinforcement Learning](https://arxiv.org/abs/1705.07461), NIPS 2017
+* [Pruning Algorithm to Accelerate Convolutional Neural Networks for Edge Applications](http://arxiv.org/abs/2005.04275), by J. Liu, S. Tripathi, U. Kurup, and M. Shah.
+* https://github.com/JayPatwardhan/ResNet-PyTorch/blob/master/ResNet/ResNet.py
 
 
