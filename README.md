@@ -16,7 +16,6 @@
 * [Model](#model)
 * [Pruning Process](#pruning-process)
 * [Parameters](#prerequisites)
-* [Training](#training) - Maybe we'll combine it with Running Instructions
 * [Running Instructions](#Running Instructions)
 * [Results](#Results)
 * [Prerequisites](#prerequisites)
@@ -85,14 +84,14 @@ for percent in prune_percents:
 As you cans see, we examine different percents of amount of weights to be omitted from the pretrained model. In the internal loop we use `prune.l1_unstructured` which cuts for each layer the smallest L1-norm weights. We make the seperation for conv. layers and linear layers because we've found that pruning the final linear layers affect the accuracy, especially the last decisive-softmax layer.
 **Where is the process of removing weights?** well, we have a mask which is an internal state buffer to stay only part of the weights and can be obtained by `model.named_buffers()`. Officialy we have only the parameter of the original weights named `weight_orig` (obtained by `model.named_parameters()`). This parameter are multiplied by the mask and the result is stored in another pruning's attribute called `model.weight`.This multplication is effectively, the pruning. It occures implictly by a callback invoked before each forward-pass by Pytorch's `forward_pre_hooks`.
 
-## Prerequisites
+# Prerequisites
 |Library         | Version |
-|----------------------|----|
-|`Python`|  `3.5.5 (Anaconda)`|
-|`torch`|  `0.4.1`|
-|`gym`|  `0.10.9`|
-|`tensorboard`|  `1.12.0`|
-|`tensorboardX`|  `1.5`|
+|--------------------|----|
+|`Python`|  `3.9 (Anaconda)`|
+|`numpy`| `1.22.3`|
+|`torch`| `1.11.0`|
+|`torchvision`| `0.12.0`|
+|`matplotlib`| `3.5.2 `|
 
 
 ## Files in the repository
