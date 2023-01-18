@@ -46,7 +46,7 @@ In this project, we will use connection pruning, particularly L1 norm pruning, w
 ![boxing](https://github.com/MichaelB0312/Weights-Pruning/blob/main/images/pruning_process.png)
 
 ## Running Instructions
-### Stage 1: Run `main.py`
+#### Stage 1: Run `main.py`
 It's important to mention that Pruning process occures on **inference time**. Before that you should make the training of our model in `main.py`.
 Basically, you can run it directly by your favoutire IDE.
 Naturally, you would probably be inquisitive about the relations between hyprer-parameters and Pruning performance.
@@ -64,7 +64,7 @@ Thus, **we're offering interactive I/O for hyprer-parameters tuning with `argpar
 Recommended values were selected empirically as the best parameters for pruning process.
 At the end of training, you should notice that you get locally the file: `./checkpoints/cifar10_resnet50_ckpt_epoch60.pth` which concludes the **checkpoints** of our model. You can also use our provided checkpoints anyway.
 
-### Stage 2: Run `pruining.py`
+#### Stage 2: Run `pruning.py`
 As you see from our last remark from Stage 1, you should first ensure that you have checkoints file because our Pruning Process occures on post-training.
 We are using the package `torch.nn.util.prune` and make the following process:
 ```python
@@ -82,6 +82,8 @@ for percent in prune_percents:
         if isinstance(module, torch.nn.Linear) and name != 'output':
             prune.l1_unstructured(module=module, name='weight', amount=percent)
 ```
+As you cans see, we examine different percents of amount of weights to be omitted from the pretrained model. In the internal loop we use `prune.l1_unstructured` which cuts for each layer the smallest L1-norm weights. We make the seperation for conv. layers and linear layers because we've found that pruning the final linear layers affect the accuracy, especially the last decisive-softmax layer.
+**Where is the process of removing weights?** well, we have a mask which is an internal state buffer to stay only part of the weights and can be obtained by `model.named_buffers()`. Officialy we have only the parameter of the original weights named `weight_orig` (obtained by `model.named_parameters()`). This parameter are multiplied by the mask and the result is stored in another pruning's attribute called `model.weight`.This multplication is effectively, the pruning. It occures implictly by a callback invoked before each forward-pass by Pytorch's `forward_pre_hooks`.
 
 ## Prerequisites
 |Library         | Version |
