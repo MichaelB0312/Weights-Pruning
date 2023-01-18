@@ -85,12 +85,13 @@ As you cans see, we examine different percents of amount of weights to be omitte
 **Where is the process of removing weights?** well, we have a mask which is an internal state buffer to stay only part of the weights and can be obtained by `model.named_buffers()`. Officialy we have only the parameter of the original weights named `weight_orig` (obtained by `model.named_parameters()`). This parameter are multiplied by the mask and the result is stored in another pruning's attribute called `model.weight`.This multplication is effectively, the pruning. It occures implictly by a callback invoked before each forward-pass by Pytorch's `forward_pre_hooks`.
 
 # Results
-After having a baseline, we started to cut weights from the model. In each iteration, we removed a higher percentage of weights, from 0% in the first iteration to 100% in the last one, with a step size of 5%. In the end, we got a graph of the accuracy as a function of the pruning percent.
+After having a baseline, we started to cut weights from the model. In each iteration, we removed a higher percentage of weights, from 0% in the first iteration to 100% in the last one, with a step size of 5%. In the end, we got a graph of the accuracy as a function of the pruning percent. We chose hyper-paramters and optimizer as decribed above.
 
 We've got the following result:
+
 ![boxing](https://github.com/MichaelB0312/Weights-Pruning/blob/main/images/prune_results.png)
 
-As we can see, Removing 40% of the weights: increases memory saving while having minimal damage on our high accuracy! 
+As we can see, it's possible to removing 40% of the weights, **massive saving of resources and memory** while having **minimal damage on our high accuracy!** 
 
 
 
