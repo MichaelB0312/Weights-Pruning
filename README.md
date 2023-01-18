@@ -52,8 +52,8 @@ Basically, you can run it directly by your favoutire IDE.
 Naturally, you would probably be inquisitive about the relations between hyprer-parameters and Pruning performance.
 Thus, **we're offering interactive I/O for hyprer-parameters tuning with `argparse`:**
 
-|Parameter | Type | Input Command | Recommended Value | Description 
-|-------|------|-----------------------------|----|-------------------|
+|Parameter | Type | Input Command | Recommended Value | Description| 
+|-------|------|--------------------------------------|----|--------------|
 |batch_size| int | ```python run.py --batch_size <your value>``` | 128 | mini-batch size |
 |learning_rate| float | ```python run.py --learning_rate <your value>```|0.01| initial optimizer's learning rate |
 |momentum| float | ```python run.py --learning_rate <your value>``` |0.9| Optionally for Adam's optimizer |
