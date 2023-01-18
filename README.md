@@ -60,7 +60,27 @@ Thus, **we're offering interactive I/O for hyprer-parameters tuning with `argpar
 |weight_decay| float | ```python run.py --weight_decay <your value>``` | 5e-4 | regularization parameter | 
 |epochs| int | ```python run.py --epochs <your value>``` | 60 | Amount of running on all data| 
 |T_max| int | ```python run.py --T_max <your value>``` | 20 |  [Cosine Annealing parameter](https://pytorch.org/docs/stable/generated/torch.optim.lr_scheduler.CosineAnnealingLR.html) |
+Recommended values were selected empirically as the best parameters for pruning process.
+At the end of training, you should notice that you get locally the file: `./checkpoints/cifar10_resnet50_ckpt_epoch60.pth` which concludes the **checkpoints** of our model. You can also use our provided checkpoints anyway.
 
+### Stage 2: Run `pruining.py`
+As you see from our last remark from Stage 1, you should first ensure that you have checkoints file because our Pruning Process occures on post-training.
+We are using the package `torch.nn.util.prune` and make the following process:
+```python
+for percent in prune_percents:
+    # load the trained model
+    state = torch.load(f'./checkpoints/cifar10_resnet50_ckpt_epoch60.pth', map_location=device)
+    model.load_state_dict(state['net'])
+
+    # performing the pruning
+    for name, module in model.named_modules():
+        if percent == 0:
+            continue
+        if isinstance(module, torch.nn.Conv2d):
+            prune.l1_unstructured(module=module, name='weight', amount=percent)
+        if isinstance(module, torch.nn.Linear) and name != 'output':
+            prune.l1_unstructured(module=module, name='weight', amount=percent)
+```
 
 ## Prerequisites
 |Library         | Version |
